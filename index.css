@@ -1,3 +1,25 @@
+body{
+    background-color: rgb(27, 170, 247);
+}
 #question{
-    color: blue;
+    color: white;
+    padding: 20px;
+}
+#questionButton{
+    margin: 20px;
+    background-color: orange;
+}
+#submitAnswerButton{
+    background-color: orange;
+}
+#revealAnswerButton{
+    background-color: orange;
+}
+h1{
+    padding: 20px;
+    color: white;
+}
+p{
+    color: white;
+    padding: 20px;
 }

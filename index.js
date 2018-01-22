@@ -2,12 +2,12 @@ $(() => {
     let realAnswer
     $('#questionButton').click(() => {
           
-        $('#answer').val(' ')
+        $('#answer').val('')
         $('#result').text('?')
         $('#correctAnswer').text('?')
         $.ajax({
             type: 'GET',
-            url: 'https://opentdb.com/api.php?amount=1&category=9&difficulty=medium&type=multiple'
+            url: 'https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean'
         }).done((res) => {
             console.log(res)
             let question = res.results
@@ -21,7 +21,7 @@ $(() => {
     $('#answerField').submit((e) => {
         e.preventDefault()
         let answer = $('#answer').val()
-        let result = answer.toLowerCase() == realAnswer.toLowerCase() ? 'Correct': 'Incorrect. Click the Reveal Answer button'
+        let result = (answer.toLowerCase() == realAnswer.toLowerCase()) ? 'Correct': 'Incorrect. Click the Reveal Answer button'
         $('#result').text(`${result}`)
     })
     $('#revealAnswerButton').click(() => {
